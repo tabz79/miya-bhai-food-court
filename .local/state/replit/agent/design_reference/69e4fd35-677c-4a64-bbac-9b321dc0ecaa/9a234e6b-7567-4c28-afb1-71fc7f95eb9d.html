@@ -1,0 +1,1109 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miya Bhai Food Court - Legendary Hyderabadi Cuisine</title>
+    <meta name="description" content="Experience authentic Hyderabadi cuisine at Miya Bhai Food Court. Multiple branches serving traditional biryani, tandoori, and Nizami specialties since generations.">
+    <meta name="keywords" content="Hyderabadi food, biryani, Nizami cuisine, Miya Bhai, food court, authentic Indian restaurant">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Miya Bhai Food Court - Legendary Hyderabadi Cuisine">
+    <meta property="og:description" content="Experience authentic Hyderabadi cuisine with traditional biryani, tandoori, and Nizami specialties.">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://miyabhaifoodcourt.com">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Miya Bhai Food Court",
+        "description": "Authentic Hyderabadi cuisine restaurant with traditional biryani and Nizami specialties",
+        "cuisine": ["Indian", "Hyderabadi", "Nizami"],
+        "priceRange": "$$",
+        "servesCuisine": "Hyderabadi",
+        "hasMenu": {
+            "@type": "Menu",
+            "hasMenuSection": [
+                {"@type": "MenuSection", "name": "Biryani"},
+                {"@type": "MenuSection", "name": "Tandoori"},
+                {"@type": "MenuSection", "name": "Beverages"}
+            ]
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'zaffran': '#F4C430',
+                    'biryani': '#8B4513',
+                    'jade': '#00A86B',
+                    'charcoal': '#36454F',
+                    'ivory': '#FFFFF0',
+                    'warm-gray': '#F5F5DC'
+                },
+                fontFamily: {
+                    'arabic': ['Amiri', 'serif'],
+                    'body': ['Inter', 'sans-serif']
+                },
+                backgroundImage: {
+                    'geometric': 'linear-gradient(45deg, transparent 30%, rgba(244, 196, 48, 0.1) 30%, rgba(244, 196, 48, 0.1) 70%, transparent 70%)',
+                    'nizami-pattern': 'radial-gradient(circle at 50% 50%, rgba(0, 168, 107, 0.1) 0%, transparent 50%)'
+                }
+            }
+        }
+    };
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="font-body bg-ivory text-charcoal overflow-x-hidden" data-mock="true">
+
+    <!-- @COMPONENT: Header [navigation, logo, contact info] -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <!-- Top Contact Bar -->
+            <div class="hidden md:flex justify-between items-center py-2 text-sm border-b border-warm-gray">
+                <div class="flex items-center space-x-4 text-charcoal">
+                    <span data-bind="contact.phone" class="flex items-center">
+                        <i data-lucide="phone" class="w-4 h-4 mr-1"></i>
+                        +91 9876543210
+                    </span>
+                    <span data-bind="contact.email" class="flex items-center">
+                        <i data-lucide="mail" class="w-4 h-4 mr-1"></i>
+                        order@miyabhaifoodcourt.com
+                    </span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="#" class="text-biryani hover:text-zaffran transition-colors">
+                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="text-biryani hover:text-zaffran transition-colors">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="text-biryani hover:text-zaffran transition-colors">
+                        <i data-lucide="twitter" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Main Navigation -->
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl md:text-3xl font-arabic font-bold text-biryani">
+                        میا بھائی <!-- Miya Bhai in Urdu -->
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl md:text-2xl font-bold text-charcoal" data-bind="brand.name">Miya Bhai</h1>
+                        <p class="text-xs text-biryani font-medium" data-bind="brand.tagline">Food Court</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-charcoal hover:text-biryani font-medium transition-colors">Home</a>
+                    <a href="#menu" class="text-charcoal hover:text-biryani font-medium transition-colors">Menu</a>
+                    <a href="#branches" class="text-charcoal hover:text-biryani font-medium transition-colors">Branches</a>
+                    <a href="#about" class="text-charcoal hover:text-biryani font-medium transition-colors">About</a>
+                    <a href="#contact" class="text-charcoal hover:text-biryani font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button class="hidden md:block bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:handleOrder">
+                        Order Now
+                    </button>
+                    <button class="bg-zaffran text-charcoal px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:handleBooking">
+                        Book Table
+                    </button>
+                    <button class="lg:hidden text-charcoal" data-event="click:toggleMobileMenu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <main>
+        <!-- @COMPONENT: Hero [rotating images, CTAs, brand story] -->
+        <section id="home" class="relative min-h-screen bg-gradient-to-br from-biryani to-charcoal overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-geometric opacity-30"></div>
+            
+            <div class="relative container mx-auto px-4 py-12 lg:py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                    <!-- Text Content -->
+                    <div class="text-center lg:text-left">
+                        <div class="mb-6">
+                            <h2 class="text-4xl md:text-6xl lg:text-7xl font-arabic font-bold text-zaffran mb-4" data-bind="hero.title">
+                                بادشاہی ذائقہ
+                            </h2>
+                            <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4" data-bind="hero.subtitle">
+                                Royal Flavors of Hyderabad
+                            </h3>
+                            <p class="text-lg md:text-xl text-warm-gray font-medium" data-bind="hero.description">
+                                Experience the legendary taste that has made Miya Bhai a household name across generations
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button class="bg-zaffran text-charcoal px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all" data-event="click:handleOrder">
+                                Order Now
+                            </button>
+                            <button class="border-2 border-jade text-jade px-8 py-4 rounded-lg font-bold text-lg hover:bg-jade hover:text-white transition-all" data-event="click:exploreMenu">
+                                Explore Menu
+                            </button>
+                        </div>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-warm-gray">
+                            <div class="flex items-center" data-bind="stats.branches">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-zaffran"></i>
+                                <span class="font-medium">12+ Branches</span>
+                            </div>
+                            <div class="flex items-center" data-bind="stats.experience">
+                                <i data-lucide="clock" class="w-5 h-5 mr-2 text-zaffran"></i>
+                                <span class="font-medium">25+ Years</span>
+                            </div>
+                            <div class="flex items-center" data-bind="stats.customers">
+                                <i data-lucide="users" class="w-5 h-5 mr-2 text-zaffran"></i>
+                                <span class="font-medium">1M+ Served</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero Images Grid -->
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-4 lg:gap-6">
+                            <!-- Main featured dish -->
+                            <!-- A steaming plate of authentic Hyderabadi chicken biryani with aromatic basmati rice, tender meat, and colorful garnishes -->
+                            <div class="col-span-2 relative rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                                     alt="Authentic Hyderabadi Biryani" 
+                                     class="w-full h-64 md:h-80 object-cover transform hover:scale-105 transition-transform duration-700" 
+                                     data-mock-image="true" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 text-white">
+                                    <h4 class="text-xl font-bold" data-bind="featured.dish1.name">Hyderabadi Dum Biryani</h4>
+                                    <p class="text-sm" data-bind="featured.dish1.description">Our signature recipe</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Secondary dishes -->
+                            <!-- Succulent tandoori chicken pieces with char marks and vibrant orange-red marinade -->
+                            <div class="relative rounded-xl overflow-hidden shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                                     alt="Tandoori Chicken" 
+                                     class="w-full h-40 object-cover" 
+                                     data-mock-image="true" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                <div class="absolute bottom-2 left-2 text-white">
+                                    <h5 class="font-bold text-sm" data-bind="featured.dish2.name">Tandoori Special</h5>
+                                </div>
+                            </div>
+                            
+                            <!-- Traditional sweet drink in a clay cup with garnish and steam rising -->
+                            <div class="relative rounded-xl overflow-hidden shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
+                                     alt="Traditional Indian Chai" 
+                                     class="w-full h-40 object-cover" 
+                                     data-mock-image="true" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                <div class="absolute bottom-2 left-2 text-white">
+                                    <h5 class="font-bold text-sm" data-bind="featured.dish3.name">Irani Chai</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Islamic Pattern -->
+                        <div class="absolute -top-8 -right-8 w-32 h-32 bg-zaffran/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-8 -left-8 w-24 h-24 bg-jade/20 rounded-full blur-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Hero -->
+
+        <!-- @COMPONENT: StorySection [heritage, values, legacy] -->
+        <section id="about" class="py-16 lg:py-24 bg-white relative overflow-hidden">
+            <!-- Architectural Pattern Background -->
+            <div class="absolute inset-0 bg-nizami-pattern opacity-50"></div>
+            
+            <div class="relative container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-arabic font-bold text-biryani mb-4" data-bind="story.title">
+                        ہماری کہانی
+                    </h2>
+                    <h3 class="text-2xl md:text-4xl font-bold text-charcoal mb-6" data-bind="story.subtitle">
+                        The Miya Bhai Legacy
+                    </h3>
+                    <div class="w-24 h-1 bg-zaffran mx-auto"></div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Story Content -->
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed" data-bind="story.paragraph1">
+                            Founded in the heart of Old City Hyderabad, Miya Bhai Food Court began as a humble eatery serving authentic Nizami cuisine to locals and travelers alike. Our recipes, passed down through generations, represent the true essence of Hyderabadi culinary artistry.
+                        </p>
+                        
+                        <p class="text-lg text-gray-700 leading-relaxed" data-bind="story.paragraph2">
+                            From our signature Dum Biryani cooked in traditional bhaghar to our perfectly spiced tandoori delicacies, every dish tells a story of heritage, passion, and unwavering commitment to authenticity. Today, with multiple branches across the city, we continue to serve the same royal flavors that made us legendary.
+                        </p>
+                        
+                        <!-- Heritage Points -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <!-- @MAP: heritagePoints.map(point => ( -->
+                            <div class="flex items-start space-x-3" data-bind="heritage.point1">
+                                <div class="w-8 h-8 bg-zaffran rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="crown" class="w-4 h-4 text-charcoal"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-charcoal">Royal Recipes</h4>
+                                    <p class="text-gray-600 text-sm">Authentic Nizami flavors from the Nizam's kitchen</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3" data-bind="heritage.point2">
+                                <div class="w-8 h-8 bg-jade rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-charcoal">25+ Years Legacy</h4>
+                                    <p class="text-gray-600 text-sm">Serving Hyderabad with love since 1998</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3" data-bind="heritage.point3">
+                                <div class="w-8 h-8 bg-biryani rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="award" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-charcoal">Award Winning</h4>
+                                    <p class="text-gray-600 text-sm">Recognized for culinary excellence</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3" data-bind="heritage.point4">
+                                <div class="w-8 h-8 bg-zaffran rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="heart" class="w-4 h-4 text-charcoal"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-charcoal">Family Tradition</h4>
+                                    <p class="text-gray-600 text-sm">Recipes preserved across generations</p>
+                                </div>
+                            </div>
+                            <!-- @END_MAP )) -->
+                        </div>
+                    </div>
+                    
+                    <!-- Heritage Images -->
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Historic Nizami architecture showing intricate arches, domes, and traditional Islamic geometric patterns -->
+                            <div class="col-span-2 rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" 
+                                     alt="Historic Hyderabadi Architecture" 
+                                     class="w-full h-48 object-cover" 
+                                     data-mock-image="true" />
+                            </div>
+                            
+                            <!-- Traditional Indian restaurant kitchen with chefs preparing food in clay ovens -->
+                            <div class="rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                     alt="Traditional Cooking Methods" 
+                                     class="w-full h-32 object-cover" 
+                                     data-mock-image="true" />
+                            </div>
+                            
+                            <!-- Beautiful Charminar monument in Hyderabad with its iconic four minarets and arches -->
+                            <div class="rounded-xl overflow-hidden shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                     alt="Charminar Hyderabad" 
+                                     class="w-full h-32 object-cover" 
+                                     data-mock-image="true" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: StorySection -->
+
+        <!-- @COMPONENT: FeaturedMenu [highlights, bestsellers, categories] -->
+        <section id="menu" class="py-16 lg:py-24 bg-warm-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-arabic font-bold text-biryani mb-4" data-bind="menu.title">
+                        منو خصوصی
+                    </h2>
+                    <h3 class="text-2xl md:text-4xl font-bold text-charcoal mb-6" data-bind="menu.subtitle">
+                        Our Signature Menu
+                    </h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-bind="menu.description">
+                        Discover the authentic flavors of Hyderabad with our carefully curated selection of traditional dishes
+                    </p>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <!-- @MAP: categories.map(category => ( -->
+                    <button class="bg-white px-6 py-3 rounded-full font-medium text-charcoal hover:bg-biryani hover:text-white transition-all shadow-md" data-bind="category.all" data-event="click:filterCategory">
+                        All Items
+                    </button>
+                    <button class="bg-white px-6 py-3 rounded-full font-medium text-charcoal hover:bg-biryani hover:text-white transition-all shadow-md" data-bind="category.biryani" data-event="click:filterCategory">
+                        Biryani
+                    </button>
+                    <button class="bg-white px-6 py-3 rounded-full font-medium text-charcoal hover:bg-biryani hover:text-white transition-all shadow-md" data-bind="category.tandoori" data-event="click:filterCategory">
+                        Tandoori
+                    </button>
+                    <button class="bg-white px-6 py-3 rounded-full font-medium text-charcoal hover:bg-biryani hover:text-white transition-all shadow-md" data-bind="category.beverages" data-event="click:filterCategory">
+                        Beverages
+                    </button>
+                    <button class="bg-white px-6 py-3 rounded-full font-medium text-charcoal hover:bg-biryani hover:text-white transition-all shadow-md" data-bind="category.desserts" data-event="click:filterCategory">
+                        Desserts
+                    </button>
+                    <!-- @END_MAP )) -->
+                </div>
+                
+                <!-- Menu Items Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- @MAP: menuItems.map(item => ( -->
+                    
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item1">
+                        <!-- Aromatic Hyderabadi mutton biryani with fragrant basmati rice, tender meat, and traditional garnishes -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Mutton Biryani" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-zaffran text-charcoal text-xs font-bold px-2 py-1 rounded-full">BESTSELLER</span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">SPICY</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Hyderabadi Mutton Biryani</h4>
+                            <p class="text-gray-600 text-sm mb-4">Tender mutton pieces cooked with aromatic basmati rice in traditional dum style</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹450</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item2">
+                        <!-- Perfectly grilled tandoori chicken with charred edges and vibrant red marinade -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Tandoori Chicken" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">MEDIUM</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Tandoori Chicken Full</h4>
+                            <p class="text-gray-600 text-sm mb-4">Whole chicken marinated in yogurt and spices, grilled to perfection</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹350</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item3">
+                        <!-- Fresh green vegetable biryani with colorful mixed vegetables and aromatic rice -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Vegetable Biryani" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">VEG</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Vegetable Biryani</h4>
+                            <p class="text-gray-600 text-sm mb-4">Mixed vegetables cooked with fragrant basmati rice and traditional spices</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹250</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item4">
+                        <!-- Traditional Indian lassi in a tall glass with creamy texture and cardamom garnish -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Sweet Lassi" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">REFRESHING</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Sweet Lassi</h4>
+                            <p class="text-gray-600 text-sm mb-4">Traditional yogurt-based drink with cardamom and rose water</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹80</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 5 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item5">
+                        <!-- Spicy Indian street food with vibrant colors and traditional accompaniments -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Chicken Tikka" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">SPICY</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Chicken Tikka</h4>
+                            <p class="text-gray-600 text-sm mb-4">Succulent chicken pieces marinated and grilled in tandoor</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹280</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 6 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item6">
+                        <!-- Colorful Indian street food chaat with crispy elements and vibrant chutneys -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Pani Puri" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-yellow-500 text-charcoal text-xs font-bold px-2 py-1 rounded-full">POPULAR</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Pani Puri (6 Pcs)</h4>
+                            <p class="text-gray-600 text-sm mb-4">Crispy puris filled with spiced water, tamarind chutney, and chutneys</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹120</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 7 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item7">
+                        <!-- Traditional Indian street food with layered presentation and colorful garnishes -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1596560548464-f010549b84d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Bhel Puri" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Bhel Puri</h4>
+                            <p class="text-gray-600 text-sm mb-4">Mix of puffed rice, vegetables, and tangy chutneys</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹100</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 8 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group" data-bind="menu.item8">
+                        <!-- Rich Indian dessert with golden syrup and nuts garnish -->
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" 
+                                 alt="Gulab Jamun" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" 
+                                 data-mock-image="true" />
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">SWEET</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-charcoal mb-2">Gulab Jamun (2 Pcs)</h4>
+                            <p class="text-gray-600 text-sm mb-4">Soft milk dumplings soaked in rose-flavored sugar syrup</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-biryani">₹90</span>
+                                <button class="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:addToCart">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- @END_MAP )) -->
+                </div>
+                
+                <!-- View Full Menu CTA -->
+                <div class="text-center mt-12">
+                    <button class="bg-biryani text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all" data-event="click:viewFullMenu">
+                        View Complete Menu
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: FeaturedMenu -->
+
+        <!-- @COMPONENT: BranchesSection [locations, discovery, maps] -->
+        <section id="branches" class="py-16 lg:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-arabic font-bold text-biryani mb-4" data-bind="branches.title">
+                        ہمارے مقامات
+                    </h2>
+                    <h3 class="text-2xl md:text-4xl font-bold text-charcoal mb-6" data-bind="branches.subtitle">
+                        Find Miya Bhai Near You
+                    </h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-bind="branches.description">
+                        Visit any of our conveniently located branches to experience authentic Hyderabadi cuisine
+                    </p>
+                </div>
+                
+                <!-- Branches Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- @MAP: branches.map(branch => ( -->
+                    
+                    <!-- Branch 1 -->
+                    <div class="bg-warm-gray rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="branch.hitech">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-charcoal mb-2">Hi-Tech City Branch</h4>
+                                <div class="flex items-center text-jade mb-2">
+                                    <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                    <span class="text-sm">HITEC City, Madhapur</span>
+                                </div>
+                            </div>
+                            <span class="bg-zaffran text-charcoal text-xs font-bold px-2 py-1 rounded-full">FLAGSHIP</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="clock" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">11:00 AM - 11:00 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">+91 9876543210</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="car" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">Parking Available</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-jade text-white py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:getDirections">
+                                <i data-lucide="navigation" class="w-4 h-4 inline mr-1"></i>
+                                Directions
+                            </button>
+                            <button class="flex-1 bg-zaffran text-charcoal py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:callBranch">
+                                <i data-lucide="phone" class="w-4 h-4 inline mr-1"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Branch 2 -->
+                    <div class="bg-warm-gray rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="branch.oldcity">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-charcoal mb-2">Old City Branch</h4>
+                                <div class="flex items-center text-jade mb-2">
+                                    <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                    <span class="text-sm">Near Charminar</span>
+                                </div>
+                            </div>
+                            <span class="bg-biryani text-white text-xs font-bold px-2 py-1 rounded-full">ORIGINAL</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="clock" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">10:00 AM - 12:00 AM</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">+91 9876543211</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="users" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">Family Dining</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-jade text-white py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:getDirections">
+                                <i data-lucide="navigation" class="w-4 h-4 inline mr-1"></i>
+                                Directions
+                            </button>
+                            <button class="flex-1 bg-zaffran text-charcoal py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:callBranch">
+                                <i data-lucide="phone" class="w-4 h-4 inline mr-1"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Branch 3 -->
+                    <div class="bg-warm-gray rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="branch.jubileehills">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-charcoal mb-2">Jubilee Hills Branch</h4>
+                                <div class="flex items-center text-jade mb-2">
+                                    <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                    <span class="text-sm">Road No. 36, Jubilee Hills</span>
+                                </div>
+                            </div>
+                            <span class="bg-jade text-white text-xs font-bold px-2 py-1 rounded-full">NEW</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="clock" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">11:30 AM - 11:30 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">+91 9876543212</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="wifi" class="w-4 h-4 mr-2 text-biryani"></i>
+                                <span class="text-sm">Free WiFi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-3">
+                            <button class="flex-1 bg-jade text-white py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:getDirections">
+                                <i data-lucide="navigation" class="w-4 h-4 inline mr-1"></i>
+                                Directions
+                            </button>
+                            <button class="flex-1 bg-zaffran text-charcoal py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all" data-event="click:callBranch">
+                                <i data-lucide="phone" class="w-4 h-4 inline mr-1"></i>
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- @END_MAP )) -->
+                </div>
+                
+                <!-- View All Branches CTA -->
+                <div class="text-center">
+                    <button class="bg-biryani text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all" data-event="click:viewAllBranches">
+                        View All 12 Branches
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: BranchesSection -->
+
+        <!-- @COMPONENT: CTASection [order, booking, contact] -->
+        <section class="py-16 lg:py-24 bg-gradient-to-r from-biryani to-charcoal relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-geometric opacity-20"></div>
+            
+            <div class="relative container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-arabic font-bold text-zaffran mb-6" data-bind="cta.title">
+                    آج ہی آرڈر کریں
+                </h2>
+                <h3 class="text-2xl md:text-4xl font-bold text-white mb-6" data-bind="cta.subtitle">
+                    Experience Royal Flavors Today
+                </h3>
+                <p class="text-lg text-warm-gray mb-8 max-w-2xl mx-auto" data-bind="cta.description">
+                    Don't wait to taste the authentic flavors of Hyderabad. Order now or book your table for an unforgettable dining experience.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button class="bg-zaffran text-charcoal px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all shadow-lg" data-event="click:startOrder">
+                        <i data-lucide="shopping-cart" class="w-5 h-5 inline mr-2"></i>
+                        Order for Delivery
+                    </button>
+                    <button class="bg-jade text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transform hover:scale-105 transition-all shadow-lg" data-event="click:bookTable">
+                        <i data-lucide="calendar" class="w-5 h-5 inline mr-2"></i>
+                        Book Your Table
+                    </button>
+                    <button class="border-2 border-warm-gray text-warm-gray px-8 py-4 rounded-lg font-bold text-lg hover:bg-warm-gray hover:text-charcoal transition-all" data-event="click:callNow">
+                        <i data-lucide="phone" class="w-5 h-5 inline mr-2"></i>
+                        Call Now
+                    </button>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center gap-8 mt-12 text-warm-gray">
+                    <div class="flex items-center" data-bind="trust.delivery">
+                        <i data-lucide="truck" class="w-6 h-6 mr-2 text-zaffran"></i>
+                        <span class="font-medium">30-Min Delivery</span>
+                    </div>
+                    <div class="flex items-center" data-bind="trust.freshness">
+                        <i data-lucide="chef-hat" class="w-6 h-6 mr-2 text-zaffran"></i>
+                        <span class="font-medium">Fresh Daily</span>
+                    </div>
+                    <div class="flex items-center" data-bind="trust.support">
+                        <i data-lucide="headphones" class="w-6 h-6 mr-2 text-zaffran"></i>
+                        <span class="font-medium">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: CTASection -->
+
+        <!-- @COMPONENT: TestimonialsSection [reviews, ratings, social proof] -->
+        <section class="py-16 lg:py-24 bg-warm-gray">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-arabic font-bold text-biryani mb-4" data-bind="testimonials.title">
+                        گاہکوں کی رائے
+                    </h2>
+                    <h3 class="text-2xl md:text-4xl font-bold text-charcoal mb-6" data-bind="testimonials.subtitle">
+                        What Our Customers Say
+                    </h3>
+                </div>
+                
+                <!-- Testimonials Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- @MAP: testimonials.map(testimonial => ( -->
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="testimonial1">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-zaffran">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"The best Hyderabadi biryani I've ever had! The authentic flavors remind me of my grandmother's cooking. Miya Bhai has truly preserved the traditional taste."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-biryani rounded-full flex items-center justify-center text-white font-bold">
+                                A
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-bold text-charcoal">Arjun Reddy</h4>
+                                <p class="text-sm text-gray-600">Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="testimonial2">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-zaffran">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"Excellent service and amazing food quality. The tandoori items are perfectly cooked and the ambiance takes you back to the royal era of Hyderabad."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-jade rounded-full flex items-center justify-center text-white font-bold">
+                                P
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-bold text-charcoal">Priya Sharma</h4>
+                                <p class="text-sm text-gray-600">Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow" data-bind="testimonial3">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-zaffran">
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"Multiple branches but consistent quality everywhere. Their delivery is quick and food always arrives hot. Highly recommend the mutton biryani!"</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-zaffran rounded-full flex items-center justify-center text-charcoal font-bold">
+                                R
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-bold text-charcoal">Rahul Mehta</h4>
+                                <p class="text-sm text-gray-600">Business Executive</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- @END_MAP )) -->
+                </div>
+                
+                <!-- Statistics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 text-center">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-biryani mb-2" data-bind="stats.happyCustomers">50,000+</div>
+                        <div class="text-gray-600 font-medium">Happy Customers</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-biryani mb-2" data-bind="stats.ordersDelivered">2,00,000+</div>
+                        <div class="text-gray-600 font-medium">Orders Delivered</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-biryani mb-2" data-bind="stats.rating">4.8/5</div>
+                        <div class="text-gray-600 font-medium">Average Rating</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold text-biryani mb-2" data-bind="stats.branches">12+</div>
+                        <div class="text-gray-600 font-medium">Branches</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: TestimonialsSection -->
+
+    </main>
+
+    <!-- @COMPONENT: Footer [contact, links, social, legal] -->
+    <footer class="bg-charcoal text-warm-gray">
+        <div class="container mx-auto px-4 py-12">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-arabic font-bold text-zaffran">میا بھائی</div>
+                        <div class="ml-3">
+                            <h3 class="text-xl font-bold text-white" data-bind="footer.brand.name">Miya Bhai</h3>
+                            <p class="text-sm text-jade" data-bind="footer.brand.tagline">Food Court</p>
+                        </div>
+                    </div>
+                    <p class="text-sm mb-4" data-bind="footer.brand.description">
+                        Serving authentic Hyderabadi cuisine with royal flavors that have made us a household name for over 25 years.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-warm-gray hover:text-zaffran transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-warm-gray hover:text-zaffran transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-warm-gray hover:text-zaffran transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-warm-gray hover:text-zaffran transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-bind="footer.links.title">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#menu" class="hover:text-zaffran transition-colors" data-bind="footer.links.menu">Our Menu</a></li>
+                        <li><a href="#branches" class="hover:text-zaffran transition-colors" data-bind="footer.links.branches">All Branches</a></li>
+                        <li><a href="#about" class="hover:text-zaffran transition-colors" data-bind="footer.links.about">About Us</a></li>
+                        <li><a href="/catering" class="hover:text-zaffran transition-colors" data-bind="footer.links.catering">Catering Services</a></li>
+                        <li><a href="/contact" class="hover:text-zaffran transition-colors" data-bind="footer.links.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-bind="footer.services.title">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/order" class="hover:text-zaffran transition-colors" data-bind="footer.services.delivery">Home Delivery</a></li>
+                        <li><a href="/book" class="hover:text-zaffran transition-colors" data-bind="footer.services.booking">Table Booking</a></li>
+                        <li><a href="/catering" class="hover:text-zaffran transition-colors" data-bind="footer.services.catering">Event Catering</a></li>
+                        <li><a href="#" class="hover:text-zaffran transition-colors" data-bind="footer.services.corporate">Corporate Orders</a></li>
+                        <li><a href="#" class="hover:text-zaffran transition-colors" data-bind="footer.services.bulk">Bulk Orders</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-bind="footer.contact.title">Contact Info</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start" data-bind="footer.contact.phone">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2 mt-1 text-jade"></i>
+                            <div>
+                                <div>+91 9876543210</div>
+                                <div>+91 9876543211</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-bind="footer.contact.email">
+                            <i data-lucide="mail" class="w-4 h-4 mr-2 mt-1 text-jade"></i>
+                            <div>order@miyabhaifoodcourt.com</div>
+                        </div>
+                        <div class="flex items-start" data-bind="footer.contact.address">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 text-jade"></i>
+                            <div>HITEC City, Madhapur,<br>Hyderabad - 500081</div>
+                        </div>
+                        <div class="flex items-start" data-bind="footer.contact.hours">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 mt-1 text-jade"></i>
+                            <div>Daily: 11:00 AM - 11:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                    <div class="mb-4 md:mb-0" data-bind="footer.copyright">
+                        © 2024 Miya Bhai Food Court. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="/privacy" class="hover:text-zaffran transition-colors" data-bind="footer.legal.privacy">Privacy Policy</a>
+                        <a href="/terms" class="hover:text-zaffran transition-colors" data-bind="footer.legal.terms">Terms of Service</a>
+                        <a href="/refund" class="hover:text-zaffran transition-colors" data-bind="footer.legal.refund">Refund Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: MobileNavigation [sticky bottom nav for mobile] -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-2xl border-t border-warm-gray z-50">
+        <div class="grid grid-cols-5 h-16">
+            <a href="#home" class="flex flex-col items-center justify-center text-charcoal hover:text-biryani transition-colors" data-event="click:navigateHome">
+                <i data-lucide="home" class="w-5 h-5 mb-1"></i>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="#menu" class="flex flex-col items-center justify-center text-charcoal hover:text-biryani transition-colors" data-event="click:navigateMenu">
+                <i data-lucide="menu" class="w-5 h-5 mb-1"></i>
+                <span class="text-xs font-medium">Menu</span>
+            </a>
+            <a href="/order" class="flex flex-col items-center justify-center bg-jade text-white rounded-t-2xl -mt-2 shadow-lg" data-event="click:startOrder">
+                <i data-lucide="shopping-cart" class="w-6 h-6 mb-1"></i>
+                <span class="text-xs font-bold">Order</span>
+            </a>
+            <a href="/book" class="flex flex-col items-center justify-center text-charcoal hover:text-biryani transition-colors" data-event="click:bookTable">
+                <i data-lucide="calendar" class="w-5 h-5 mb-1"></i>
+                <span class="text-xs font-medium">Book</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center text-charcoal hover:text-biryani transition-colors" data-event="click:navigateContact">
+                <i data-lucide="phone" class="w-5 h-5 mb-1"></i>
+                <span class="text-xs font-medium">Call</span>
+            </a>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: MobileNavigation -->
+
+    <!-- @STATE: mobileMenuOpen:boolean = false -->
+    <!-- @STATE: selectedCategory:string = 'all' -->
+    <!-- @STATE: cartItems:array = [] -->
+
+    <script>
+        // Initialize Lucide icons
+        (function() {
+            lucide.createIcons();
+            
+            // TODO: Implement business logic, API calls, or state management
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle functionality
+            const menuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+
+            // Category filter functionality
+            document.querySelectorAll('[data-event="click:filterCategory"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement category filtering logic
+                    console.log('Category filter clicked:', this.textContent);
+                });
+            });
+
+            // Add to cart functionality
+            document.querySelectorAll('[data-event="click:addToCart"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement add to cart logic
+                    console.log('Add to cart clicked');
+                });
+            });
+
+            // Order and booking functionality
+            document.querySelectorAll('[data-event*="Order"], [data-event*="Book"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement order/booking logic
+                    console.log('Order/Book button clicked:', this.getAttribute('data-event'));
+                });
+            });
+
+            // Branch interaction functionality
+            document.querySelectorAll('[data-event="click:getDirections"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement directions logic (integrate with Google Maps)
+                    console.log('Get directions clicked');
+                });
+            });
+
+            document.querySelectorAll('[data-event="click:callBranch"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement call functionality
+                    console.log('Call branch clicked');
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+</html>

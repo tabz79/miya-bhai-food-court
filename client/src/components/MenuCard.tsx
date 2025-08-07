@@ -68,10 +68,10 @@ export default function MenuCard({ item, onAddToCart }: MenuCardProps) {
         <h4 className="text-xl font-bold text-charcoal mb-2">{item.name}</h4>
         <p className="text-gray-600 text-sm mb-4">{item.description}</p>
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-biryani">₹{item.price}</span>
+          <span className="text-2xl font-bold text-brand-maroon">₹{item.price}</span>
           <button
             onClick={() => onAddToCart(item.id)}
-            className="bg-jade text-white px-4 py-2 rounded-lg font-medium hover:bg-opacity-90 transition-all flex items-center gap-2"
+            className="bg-brand-maroon text-brand-beige px-4 py-2 rounded-lg font-medium hover:bg-brand-gold hover:text-brand-maroon transition-all flex items-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Scheherazade+New:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -54,12 +54,10 @@
   --spacing: 0.25rem;
   
   /* Custom Hyderabadi Color Palette */
-  --zaffran: hsl(52, 86%, 57%);
-  --biryani: hsl(30, 65%, 27%);
-  --charcoal: hsl(210, 25%, 20%);
-  --jade: hsl(167, 100%, 33%);
-  --ivory: hsl(60, 33%, 97%);
-  --warm-gray: hsl(60, 25%, 88%);
+  --brand-maroon: #6A1B1A;
+  --brand-gold: #C89F65;
+  --brand-beige: #F5E0B7;
+  --charcoal: #2E2E2E;
 }
 
 .dark {
@@ -121,6 +119,10 @@
 
   .font-arabic {
     font-family: var(--font-arabic);
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
   }
 }
 
