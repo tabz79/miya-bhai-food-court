@@ -1,0 +1,136 @@
+🧠 CONTEXT:
+You are building the website for Miya Bhai Food Court, a legendary Hyderabadi food brand with multiple branches and a cult following.
+This is not a generic restaurant—it’s a cultural institution with deep Nizami roots, a street-meets-royalty vibe, and a bold identity.
+
+🎯 OBJECTIVE:
+Build a mobile-first, photo-centric, and modular React + Tailwind CSS website that:
+
+Reflects Hyderabadi/Nizami heritage in its design
+
+Supports multi-branch discovery
+
+Allows in-house ordering (CTA only for now)
+
+Includes table booking (CTA only for now)
+
+Is SEO + LLM (ChatGPT/Gemini) optimized
+
+Uses non-hardcoded content, fully editable from /data folder
+
+🔧 TECH STACK:
+React + Vite
+
+Tailwind CSS
+
+lucide-react for icons
+
+Folder structure: /components, /pages, /data, /assets
+
+🏗️ STRUCTURE REQUIREMENTS:
+🧱 Modular Components (Must):
+All content (text, images, menus, branches, story, contact) must be externalized in /data/ folder (e.g., /data/menu.js, /data/story.js)
+
+Components must be reusable and accept props or pull from data files
+
+No hardcoded values inside components (except minor static UI text)
+
+Allow future developer to update ANYTHING (logo, text, addresses, food items, images) without touching JSX
+
+✅ CORE FEATURES:
+🎨 1. Branding & Cultural Design:
+Visual theme inspired by Old City Hyderabad, Nizami architecture, Irani cafés, and modern street food culture
+
+Color palette: zaffran yellow, biryani brown, charcoal black, jade green, ivory white
+
+Typography: Urdu/Nastaliq-style headers + modern sans-serif for body
+
+🗺️ 2. Dynamic Branch System:
+Support for unlimited branches
+
+Each branch has: name, address, hours, contact, Google Maps link
+
+Data should come from /data/branches.js or similar
+
+Optional: custom menu per branch (structure for future)
+
+🍽️ 3. Dynamic Menu System:
+Menu structured by category (e.g., Biryani, Tandoori, Beverages)
+
+Each item has: name, image, price, tags (spicy, veg, bestseller, etc.)
+
+Store data in /data/menu.js
+
+Menu grid layout with category filters and responsive design
+
+🏠 4. Home Page:
+Hero section with rotating food images + text + CTAs
+
+"Miya Bhai Story" block (pull from /data/story.js)
+
+Highlights block: “Why Miya Bhai?” (editable selling points)
+
+Featured dishes carousel or grid
+
+CTAs: Order Now, Book Table, Find Nearest Branch
+
+Preview of top branches (with links to full branch page)
+
+🔍 5. SEO & AI Discoverability:
+Add schema.org markup (@type: Restaurant, Menu, FAQ)
+
+Use semantic HTML (header, main, section, footer, etc.)
+
+Add editable FAQs in /data/faqs.js
+
+Set meta tags, OpenGraph tags, and mobile-first optimizations
+
+Sitemap + robots.txt placeholders
+
+💼 6. Static Pages:
+/menu: full menu with filters
+
+/branches: all branches with map view (static or embed)
+
+/about: story, legacy, values, team (from /data/story.js)
+
+/catering: B2B, events, contact form stub
+
+/order: CTA placeholder page
+
+/book: table booking form (basic stub)
+
+/contact: map + contact info + social links
+
+/terms, /privacy: placeholders
+
+📱 Responsive UX:
+Design should be mobile-first
+
+Sticky bottom navbar for mobile: Home, Menu, Order, Book, Contact
+
+Smooth scrolling, fast load time, lazy-loaded images
+
+🚫 DO NOT:
+❌ Hardcode menu, story, branches, or contact info inside JSX
+
+❌ Use Bootstrap or generic Western design templates
+
+❌ Nest all logic in single giant files—modularize everything
+
+❌ Skip responsiveness or schema markup
+
+❌ Store static image paths inside component code
+
+🧪 OPTIONAL (Future Stubs):
+WhatsApp ordering integration
+
+Razorpay/Stripe integration
+
+Customer reviews per branch
+
+Loyalty program
+
+Delivery dashboard
+
+🔚 FINAL NOTE:
+This is a living project. Everything must be easy to modify later by a developer—text, structure, logic, and design. Use best practices for scalability.
