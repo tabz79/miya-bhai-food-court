@@ -9,6 +9,7 @@ import { brandData } from '../data/brand';
 import { menuData } from '../data/menu';
 import { branchesData } from '../data/branches';
 import { storyData } from '../data/story';
+import biryani from '@/assets/biryani.jpg';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -59,14 +60,14 @@ export default function Home() {
 
       <main className="pb-20 lg:pb-0">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        <section className="relative h-[600px] flex items-center justify-center text-white overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Hyderabadi Dum Biryani"
+              src={biryani}
+              alt="Royal Nizami Biryani served in authentic crockery"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           <div className="relative z-10 container mx-auto px-4 pt-20 pb-12 text-center">
@@ -122,34 +123,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Stats Banner */}
-        <section className="bg-ivory-beige py-8 sm:py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-              <div className="flex items-center justify-center gap-4">
-                <MapPin className="w-8 h-8 text-royal-maroon" />
-                <div>
-                  <p className="text-3xl font-bold text-royal-maroon">3+</p>
-                  <p className="text-md text-charcoal">Branches</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-4">
-                <Clock className="w-8 h-8 text-royal-maroon" />
-                <div>
-                  <p className="text-3xl font-bold text-royal-maroon">65+</p>
-                  <p className="text-md text-charcoal">Years</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-4">
-                <Users className="w-8 h-8 text-royal-maroon" />
-                <div>
-                  <p className="text-3xl font-bold text-royal-maroon">1 Million+</p>
-                  <p className="text-md text-charcoal">Served</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Story Section */}
         <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
