@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogDescription?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: object;
+  schemaJson?: object;
 }
 
 export default function SEOHead({
@@ -19,72 +19,32 @@ export default function SEOHead({
   ogDescription,
   ogImage = "/og-image.jpg",
   canonicalUrl,
-  structuredData
+  schemaJson
 }: SEOHeadProps) {
-  
-  useEffect(() => {
-    // Set document title
-    document.title = title;
-    
-    // Set meta tags
-    const setMetaTag = (name: string, content: string, property?: boolean) => {
-      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-      let element = document.querySelector(selector) as HTMLMetaElement;
-      
-      if (!element) {
-        element = document.createElement('meta');
-        if (property) {
-          element.setAttribute('property', name);
-        } else {
-          element.setAttribute('name', name);
-        }
-        document.head.appendChild(element);
-      }
-      
-      element.setAttribute('content', content);
-    };
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
 
-    // Basic meta tags
-    setMetaTag('description', description);
-    setMetaTag('keywords', keywords);
-    
-    // Open Graph tags
-    setMetaTag('og:title', ogTitle || title, true);
-    setMetaTag('og:description', ogDescription || description, true);
-    setMetaTag('og:type', 'restaurant', true);
-    setMetaTag('og:image', ogImage, true);
-    
-    if (canonicalUrl) {
-      setMetaTag('og:url', canonicalUrl, true);
-      
-      // Set canonical link
-      let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', canonicalUrl);
-    }
+      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:description" content={ogDescription || description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content={ogImage} />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 
-    // Twitter Card tags
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', ogTitle || title);
-    setMetaTag('twitter:description', ogDescription || description);
-    setMetaTag('twitter:image', ogImage);
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={ogTitle || title} />
+      <meta name="twitter:description" content={ogDescription || description} />
+      <meta name="twitter:image" content={ogImage} />
 
-    // Structured data
-    if (structuredData) {
-      let scriptElement = document.querySelector('script[type="application/ld+json"]');
-      if (!scriptElement) {
-        scriptElement = document.createElement('script');
-        scriptElement.setAttribute('type', 'application/ld+json');
-        document.head.appendChild(scriptElement);
-      }
-      scriptElement.textContent = JSON.stringify(structuredData);
-    }
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
-  }, [title, description, keywords, ogTitle, ogDescription, ogImage, canonicalUrl, structuredData]);
-
-  return null;
+      {schemaJson && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaJson)}
+        </script>
+      )}
+    </Helmet>
+  );
 }

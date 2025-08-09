@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
 import { brandData } from '../data/brand';
+import Logo from '@/assets/logo.svg';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,15 +48,9 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 flex justify-between items-center py-4">
-        <Link href="/" className="flex items-center">
-          <div className="text-2xl md:text-3xl font-arabic font-bold text-biryani">
-            {brandData.urduName}
-          </div>
-          <div className="ml-3">
-            <h1 className="text-xl md:text-2xl font-bold text-charcoal">{brandData.name}</h1>
-            <p className="text-xs text-biryani font-medium">{brandData.tagline}</p>
-          </div>
+      <nav className="container mx-auto px-4 flex justify-between items-center py-3">
+        <Link href="/">
+          <img src={Logo} alt="Miya Bhai Food Court Logo" className="h-12 md:h-16 lg:h-20 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

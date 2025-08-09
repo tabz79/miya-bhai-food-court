@@ -71,6 +71,7 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 container mx-auto px-4 pt-20 pb-12 text-center">
+            
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-amiri font-bold text-brand-gold drop-shadow-md mb-6 animate-fade-in">
                 Nizam’s Royal Flavors, Perfected Since 1960
@@ -142,6 +143,9 @@ export default function Home() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
+                <p className="text-lg text-gray-800 leading-relaxed font-semibold">
+                  Welcome to Miya Bhai Food Court — a legacy of Hyderabadi biryani, Mandi, and Irani Chai. Experience the Legendary Taste that has made Miya Bhai a household name across generations.
+                </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Founded in the heart of the old city, Miya Bhai Food Court has carried forward a rich culinary legacy that celebrates timeless Hyderabadi traditions.
                 </p>

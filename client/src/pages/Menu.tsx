@@ -52,6 +52,9 @@ export default function Menu() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-biryani to-charcoal py-16 lg:py-24">
           <div className="container mx-auto px-4 text-center">
+            <p className="text-lg text-warm-gray max-w-3xl mx-auto mb-4">
+              Explore the rich tapestry of Hyderabadi flavors at Miya Bhai Food Court. Our menu features a wide array of authentic dishes, from world-famous biryanis to succulent kebabs and traditional desserts, all prepared with generations-old recipes.
+            </p>
             <h1 className="text-4xl md:text-6xl font-arabic font-bold text-zaffran mb-4">
               منو خصوصی
             </h1>
